@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Proyek JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Untuk mendapatkan card anda silahkan inputkan form dibawah ini</h2>
+
+    <div class="col">
+        <form action="#" onsubmit="renderCard(event)">
+            <fieldset>
+                Nama : <br>
+                <input type="text" id="name"><br><br>
+
+                Job : <br>
+                <input type="text" id="job"><br><br>
+
+                Email : <br>
+                <input type="email" id="email"><br><br>
+
+                Nomor Telepon : <br>
+                <input type="text" id="telp"><br><br>
+
+                Alamat : <br>
+                <textarea id="address"></textarea><br><br>
+
+                <input type="submit" value="Submit">
+
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        function renderCard(event){
+            event.preventDefault();
+            var div = document.createElement('div')
+
+
+            var name = document.getElementById('name').value
+            var job = document.getElementById('job').value
+            var email = document.getElementById('email').value
+            var telp = document.getElementById('telp').value
+            var address = document.getElementById('address').value
+
+
+            div.innerHTML = `
+            <div class="card">
+                <div class="col">
+                    <div class="card-content">
+                        <div class="head">
+                            <p class="cardheading">${name}</p>
+                            <p class="cardheading">${job}</p>
+                        </div>
+
+                        <div class="container">
+                            <p class="cardcontainer">${email}</p>
+                            <p class="cardcontainer">${telp}</p>
+                            <p class="cardcontainer">${address}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+        document.body.appendChild(div)
+        }
+    </script>
+</body>
+</html>
