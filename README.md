@@ -1,2 +1,2 @@
 # proyekjs
-Proyek javascript form dengan output card yang menampilkan data dari form
+Proyek javascript sederhana form dengan output card yang menampilkan data dari form
